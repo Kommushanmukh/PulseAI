@@ -6,3 +6,4 @@ pulseai.db
 *.egg-info/
 dist/
 build/
+.pulseai.pid
