@@ -18,6 +18,14 @@ Window Tracker → Kafka → Consumer → SQLite → Analytics → Ollama (Mistr
 - Daily top apps report
 - Weekly AI summary powered by Mistral (runs 100% locally)
 
+## Screenshots
+
+### Main Dashboard
+![PulseAI Dashboard](assets/ui.png)
+
+### Daily Report
+![Daily Report](assets/report.png)
+
 ## Tech Stack
 
 - Python, Kafka, Docker, SQLite, Ollama, Mistral
