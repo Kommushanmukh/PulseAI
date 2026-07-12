@@ -4,22 +4,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checking out code...'
-                checkout scm
+                git branch: 'dev',
+                    url: 'https://github.com/Kommushanmukh/PulseAI.git'
             }
         }
         
         stage('Install Dependencies') {
             steps {
-                echo 'Installing dependencies...'
-                sh 'pip3 install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt --break-system-packages'
             }
         }
         
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'pip3 install pytest && pytest tests/ -v'
+                sh 'pip3 install pytest --break-system-packages && pytest tests/ -v'
             }
         }
     }
